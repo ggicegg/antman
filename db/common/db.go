@@ -6,7 +6,6 @@ import (
 	"github.com/pkg/errors"
 	"github.com/sunreaver/antman/v4/db"
 	"github.com/sunreaver/antman/v4/db/mogdb"
-	"gorm.io/driver/mysql"
 	"gorm.io/driver/postgres"
 	"gorm.io/driver/sqlite"
 	"gorm.io/gorm"
@@ -27,6 +26,8 @@ func MakeDB(c db.Config, gormConfig *gorm.Config) (*db.Databases, error) {
 		dt = mogdb.MogDBOpen
 	} else if c.Type == db.DBTypeDameng { // 达梦
 		dt = dm8.Open
+	} else if c.Type == db.DBTypeOBORACLE {
+		dt = oracle.Open
 	} else {
 		return nil, errors.Errorf("no support db type: %v", c.Type)
 	}
