@@ -31,6 +31,7 @@ const (
 	DBTypeMogDb     DBType = "mogdb"
 	DBTypeSQLite    DBType = "sqllite"
 	DBTypeDameng    DBType = "dameng"
+	DBTypeOBORACLE  DBType = "ob_oracle"
 )
 
 /*

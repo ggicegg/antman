@@ -4,20 +4,25 @@ go 1.21
 
 toolchain go1.22.1
 
+replace (
+	github.com/godoes/gorm-oracle => github.com/ggicegg/gorm-oceanbase-oracle v0.0.1
+	github.com/mattn/go-oci8 => github.com/ggicegg/go-oceanbase-oci8 v0.0.1
+)
+
 require (
 	gitee.com/opengauss/openGauss-connector-go-pq v1.0.4
 	github.com/IBM/sarama v1.43.2
 	github.com/go-redis/redis/v8 v8.11.5
 	github.com/godoes/gorm-dameng v0.1.1
-	github.com/godoes/gorm-oracle v1.6.9
+	github.com/godoes/gorm-oracle v1.6.11
 	github.com/pkg/errors v0.9.1
 	github.com/sunreaver/logger/v3 v3.0.3
 	github.com/sunreaver/tomlanalysis v1.0.0
-	gorm.io/driver/mysql v1.5.6
+	gorm.io/driver/mysql v1.5.7
 	gorm.io/driver/postgres v1.5.7
-	gorm.io/driver/sqlite v1.5.5
-	gorm.io/gorm v1.25.10
-	gorm.io/plugin/dbresolver v1.5.1
+	gorm.io/driver/sqlite v1.6.0
+	gorm.io/gorm v1.31.1
+	gorm.io/plugin/dbresolver v1.6.2
 )
 
 require (
@@ -44,10 +49,11 @@ require (
 	github.com/jinzhu/inflection v1.0.0 // indirect
 	github.com/jinzhu/now v1.1.5 // indirect
 	github.com/klauspost/compress v1.17.8 // indirect
-	github.com/mattn/go-sqlite3 v1.14.17 // indirect
+	github.com/mattn/go-oci8 v0.0.0-00010101000000-000000000000
+	github.com/mattn/go-sqlite3 v1.14.22 // indirect
 	github.com/pierrec/lz4/v4 v4.1.21 // indirect
 	github.com/rcrowley/go-metrics v0.0.0-20201227073835-cf1acfcdf475 // indirect
-	github.com/sijms/go-ora/v2 v2.8.18 // indirect
+	github.com/sijms/go-ora/v2 v2.9.0
 	github.com/tjfoc/gmsm v1.4.1 // indirect
 	golang.org/x/crypto v0.31.0 // indirect
 	golang.org/x/net v0.24.0 // indirect
